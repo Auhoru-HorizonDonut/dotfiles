@@ -258,9 +258,10 @@ bindsym $mod+F6 exec xbacklight -dec 10
 
 # Take Screenshot
 # Select region
-bindsym $mod+Shift+s exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/Picture/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/Picture/screenshots/screenshot_$NOW.png
+bindsym $mod+Shift+s exec NOW=$(date +%Y-%b-%d_%H-%M-%S) && maim --format png --select > ~/pic/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/pic/screenshots/screenshot_$NOW.png
 
 # Full screen
+bindsym Print exec NOW=$(date +%Y-%b-%d_%H-%M-%S) && maim --format png > ~/pic/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/pic/screenshots/screenshot_$NOW.png
 #bindsym Print exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/Picture/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/Picture/screenshots/screenshot_$NOW.png
 
 # Keymap Toggle
