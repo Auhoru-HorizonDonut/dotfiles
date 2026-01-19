@@ -240,6 +240,9 @@ bar {
 #	status_command i3blocks
 }
 
+# Desktop wallpaper
+exec_always feh --no-fehbg --bg-scale '/home/horizon/pic/wallpaper/main_desktop_wallpaper' 
+
 # Lock screen
 bindsym $mod+Shift+BackSpace exec i3lock -i ~/pic/wallpaper/lock_screen_wallpaper -f -k -e -p win
 
