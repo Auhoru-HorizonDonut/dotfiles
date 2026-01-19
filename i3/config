@@ -241,6 +241,7 @@ bar {
 }
 
 # Desktop wallpaper
+exec_always "~/.bg_selector.sh"
 exec_always feh --no-fehbg --bg-scale '/home/horizon/pic/wallpaper/main_desktop_wallpaper' 
 
 # Lock screen
