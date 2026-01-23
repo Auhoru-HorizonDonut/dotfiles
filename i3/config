@@ -241,7 +241,7 @@ bar {
 }
 
 # Desktop wallpaper
-exec_always "~/.bg_selector.sh"
+exec_always bg_changer
 exec_always feh --bg-fill '/home/horizon/pic/wallpaper/main_desktop_wallpaper' 
 
 # Lock screen
