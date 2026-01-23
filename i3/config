@@ -272,3 +272,5 @@ bindsym Print exec NOW=$(date +%Y-%b-%d_%H-%M-%S) && maim --format png > ~/pic/s
 exec_always "setxkbmap -layout us,th -option 'grp:alt_space_toggle'"
 exec_always "~/.config/i3status/keylayout.sh"
 
+# Start picom
+exec picom --daemon
