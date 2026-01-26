@@ -274,3 +274,6 @@ exec_always "~/.config/i3status/keylayout.sh"
 
 # Start picom
 exec picom --daemon
+
+# Start Sound Server
+exec gentoo-pipewire-launcher &

@@ -18,9 +18,14 @@ fi
 # Put your fun stuff here.
 # xset s off -dpms
 
+# Set xdg runtime dir
+if test -z "$XDG_RUNTIME_DIR"; then
+	export $XDG_RUNTIME_DIR=$(mktemp -d /tmp/$(id -u)-runtime-dir.XXX)
+fi
+
 # Set bin path from user directory
 if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
-	export PATH="$HOME/.local/bin:$HOME/.local/sbin:$PATH:$HOME/.local/flutter/bin/"
+	export PATH="$HOME/.local/bin:$HOME/.local/sbin:$PATH"
 fi
 
 # Add webots path into PATH
