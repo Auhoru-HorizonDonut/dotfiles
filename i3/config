@@ -167,6 +167,9 @@ bindsym $alt+Shift+2 move container to workspace $ws12
 bindsym $alt+Shift+3 move container to workspace $ws13
 bindsym $alt+Shift+4 move container to workspace $ws14
 
+# i3wm addition configuration
+popup_during_fullscreen all
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
