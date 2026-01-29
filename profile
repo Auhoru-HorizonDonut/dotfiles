@@ -26,5 +26,8 @@ if [ -z "$DBX_CONTAINER_MANAGER" ]; then
 	export DBX_CONTAINER_MANAGER=podman
 fi
 
+# Clear screen
+clear
+
 # Fetch system info
 neofetch
