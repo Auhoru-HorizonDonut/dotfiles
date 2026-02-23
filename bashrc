@@ -16,11 +16,4 @@ fi
 
 
 # Put your fun stuff here.
-# xset s off -dpms
-
-# if [ "$DBUS_SESSION_BUS_ADDRESS" != "unix:path=/run/user/1000/bus" ]; then
-#	export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
-# fi
-
-# Print system info on start
-#neofetch
+alias less='less --use-color'
