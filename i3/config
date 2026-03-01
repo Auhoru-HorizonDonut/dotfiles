@@ -133,7 +133,7 @@ set $wsD "13: 0x0D"
 set $wsE "14: 0x0E"
 
 # Set start workspace
-exec --no-startup-id i3-msg $ws1
+exec --no-startup-id i3-msg workspace $ws1
 # switch to workspace
 bindsym $alt+Control+1 workspace number $wsB
 bindsym $alt+Control+2 workspace number $wsC
