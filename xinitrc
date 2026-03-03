@@ -1,18 +1,21 @@
 #!/bin/bash
 
-# Start picom
-exec picom --daemon
-
-# Start Sound Server
-exec gentoo-pipewire-launcher &
-
 OPTIONS="i3wm\ndwm"
 
 WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
 
+# Setup command
+xset s off -dpms
+
+# Start picom
+picom --daemon
+
+# Start Sound Server
+gentoo-pipewire-launcher &
+
 case $WM in
 	"i3wm")
-		exec dbus-launch --exit-with-session i3
+		exec i3
 		;;
 	"dwm")
 		exec dwm
@@ -21,6 +24,3 @@ case $WM in
 		exec i3
 		;;
 esac
-
-# Setup command
-xset s off -dpms
