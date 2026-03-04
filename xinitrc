@@ -13,6 +13,8 @@ picom --daemon
 # Start Sound Server
 gentoo-pipewire-launcher &
 
+bg_changer
+
 case $WM in
 	"i3wm")
 		exec i3
