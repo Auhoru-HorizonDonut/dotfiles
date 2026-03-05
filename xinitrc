@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OPTIONS="i3wm\ndwm"
+OPTIONS="i3wm\ndwm\nxfce"
 
 WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
 
@@ -21,6 +21,9 @@ case $WM in
 		;;
 	"dwm")
 		exec dwm
+		;;
+	"xfce")
+		exec startxfce4
 		;;
 	*)
 		exec i3
