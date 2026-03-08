@@ -1,9 +1,5 @@
 #!/bin/bash
 
-OPTIONS="i3wm\ndwm\nxfce"
-
-WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
-
 # Setup command
 xset s off -dpms
 
@@ -18,6 +14,10 @@ setxkbmap -layout us,th -option 'grp:alt_space_toggle'
 
 # Set backgroud picture
 bg_changer
+
+OPTIONS="i3wm\ndwm\nxfce"
+
+WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
 
 case $WM in
 	"i3wm")
