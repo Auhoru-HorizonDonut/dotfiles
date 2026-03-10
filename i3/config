@@ -262,7 +262,7 @@ bindsym Print exec NOW=$(date +%Y-%b-%d_%H-%M-%S) && maim --format png > ~/pic/s
 #bindsym Print exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/Picture/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/Picture/screenshots/screenshot_$NOW.png
 
 # Keymap Toggle
-exec_always "~/.config/i3status/keylayout.sh"
+exec_always --no-startup-id "~/.config/i3status/keylayout.sh"
 
 # Additional windows configuration
 for_window [class="^.*"] border pixel 2
