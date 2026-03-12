@@ -15,7 +15,7 @@ setxkbmap -layout us,th -option 'grp:alt_space_toggle'
 # Set backgroud picture
 bg_changer
 
-OPTIONS="i3wm\ndwm\nxfce"
+OPTIONS="dwm\ni3wm"
 
 WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
 
@@ -26,10 +26,7 @@ case $WM in
 	"dwm")
 		exec dwm
 		;;
-	"xfce")
-		exec startxfce4
-		;;
 	*)
-		exec i3
+		exec dwm
 		;;
 esac
