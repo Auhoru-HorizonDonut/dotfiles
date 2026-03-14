@@ -238,7 +238,7 @@ bindsym $mod+r mode "resize"
 bindsym $alt+v bar mode toggle
 
 # Lock screen
-bindsym $mod+Shift+BackSpace exec i3lock -i ~/pic/MGQ-Screenshot/Screenshot_20250714_115111.png -f -k -e -p win
+bindsym $mod+Shift+BackSpace exec i3lock -i $HOME/.wallpaper/Screenshot_20250714_115111.png -f -k -e -p win
 
 # Alternative adjust volume
 bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
