@@ -2,7 +2,7 @@
 
 shopt -s nullglob
 
-wallpaper_list=(~/pic/wallpaper/*)
+wallpaper_list=($HOME/.wallpaper/*)
 number_of_wallpaper=${#wallpaper_list[@]}
 
 current_time=$(date +%s%3N)
