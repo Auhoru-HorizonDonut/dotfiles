@@ -238,7 +238,7 @@ bindsym $mod+r mode "resize"
 bindsym $alt+v bar mode toggle
 
 # Lock screen
-bindsym $mod+Shift+BackSpace exec i3lock -i $HOME/.wallpaper/Screenshot_20250714_115111.png -f -k -e -p win
+bindsym $mod+Shift+BackSpace exec bg_changer 1
 
 # Alternative adjust volume
 bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -261,7 +261,9 @@ bindsym $mod+Shift+s exec printscreen 1
 bindsym Print exec printscreen 0
 #bindsym Print exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/Picture/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/Picture/screenshots/screenshot_$NOW.png
 
-# Keymap Toggle
+# Keymap toggle enable
+exec_always setkeylayout
+# Keymap Identification
 exec_always "~/.config/i3status/keylayout.sh"
 
 # Additional windows configuration
