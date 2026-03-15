@@ -21,12 +21,12 @@ WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
 
 case $WM in
 	"i3wm")
-		exec i3
+		exec dbus-launch --exit-with-session i3
 		;;
 	"dwm")
-		exec dwm
+		exec dbus-launch --exit-with-session dwm
 		;;
 	*)
-		exec dwm
+		exec dbus-launch --exit-with-session dwm
 		;;
 esac
