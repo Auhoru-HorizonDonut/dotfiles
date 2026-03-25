@@ -1,5 +1,16 @@
 #!/bin/bash
 
+startdwm()
+{
+	custom-status-monitor &
+	exec dbus-launch --exit-with-session dwm
+}
+
+starti3wm()
+{
+	exec dbus-launch --exit-with-session i3
+}
+
 # Setup command
 xset s off -dpms
 
@@ -21,12 +32,12 @@ WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
 
 case $WM in
 	"i3wm")
-		exec dbus-launch --exit-with-session i3
+		starti3wm
 		;;
 	"dwm")
-		exec dbus-launch --exit-with-session dwm
+		startdwm
 		;;
 	*)
-		exec dbus-launch --exit-with-session dwm
+		startdwm
 		;;
 esac
