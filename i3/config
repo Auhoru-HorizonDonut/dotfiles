@@ -238,7 +238,7 @@ bindsym $mod+r mode "resize"
 bindsym $alt+v bar mode toggle
 
 # Lock screen
-bindsym $mod+Shift+BackSpace exec bg_changer 1
+bindsym $mod+Shift+BackSpace exec lockscreen
 
 # Alternative adjust volume
 bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
