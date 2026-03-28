@@ -30,4 +30,4 @@ fi
 clear
 
 # Fetch system info
-neofetch
+fastfetch
