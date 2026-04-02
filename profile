@@ -22,8 +22,13 @@ if [ -z "$WEBOTS_HOME" ]; then
 fi
 
 # Add podman as container manager
-if [ -z "$DBX_CONTAINER_MANAGER" ]; then
-	export DBX_CONTAINER_MANAGER=podman
+#if [ -z "$DBX_CONTAINER_MANAGER" ]; then
+#	export DBX_CONTAINER_MANAGER=podman
+#fi
+
+# Set texmf home path
+if [ -z "$TEXMFPATH" ]; then
+	export TEXMFPATH="$HOME/.local/share/texmf"
 fi
 
 # Clear screen
