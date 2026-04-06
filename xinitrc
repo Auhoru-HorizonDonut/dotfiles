@@ -11,6 +11,15 @@ starti3wm()
 	exec dbus-launch --exit-with-session i3
 }
 
+setupmonitor()
+{
+	xrandr --output eDP-1 --auto
+	xrandr --output HDMI-1 --mode 1920x1080 --left-of eDP-1
+}
+
+# Setup multi-monitor (if available)
+setupmonitor
+
 # Setup command
 xset s off -dpms
 
