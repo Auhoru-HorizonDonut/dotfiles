@@ -17,6 +17,9 @@ setupmonitor()
 	if xrandr | grep "HDMI-1 connected"; then
 		xrandr --output HDMI-1 --mode 1920x1080 --left-of eDP-1
 		xrandr --output HDMI-1 --primary
+	else
+		xrandr --output HDMI-1 --auto
+		xrandr --output eDP-1 --primary
 	fi
 }
 
