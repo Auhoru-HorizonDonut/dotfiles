@@ -14,7 +14,10 @@ starti3wm()
 setupmonitor()
 {
 	xrandr --output eDP-1 --auto
-	xrandr --output HDMI-1 --mode 1920x1080 --left-of eDP-1
+	if xrandr | grep "HDMI-1 connected"; then
+		xrandr --output HDMI-1 --mode 1920x1080 --left-of eDP-1
+		xrandr --output HDMI-1 --primary
+	fi
 }
 
 # Setup multi-monitor (if available)
