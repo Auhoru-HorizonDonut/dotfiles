@@ -23,27 +23,33 @@ setupmonitor()
 	fi
 }
 
+preflightstartup()
+{
+	# Setup command
+	xset s off -dpms
+	
+	# Start picom
+	picom --daemon
+	
+	# Start Sound Server
+	gentoo-pipewire-launcher restart &
+	
+	# Set keyboard layout
+	#setxkbmap -layout us,th -option 'grp:alt_space_toggle'
+	
+}
+
 # Setup multi-monitor (if available)
 setupmonitor
-
-# Setup command
-xset s off -dpms
-
-# Start picom
-picom --daemon
-
-# Start Sound Server
-gentoo-pipewire-launcher &
-
-# Set keyboard layout
-#setxkbmap -layout us,th -option 'grp:alt_space_toggle'
 
 # Set backgroud picture
 bg_changer
 
 OPTIONS="dwm\ni3wm"
-
 WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
+
+# Run wm related system start up
+preflightstartup
 
 case $WM in
 	"i3wm")
