@@ -16,4 +16,4 @@ fi
 
 
 # Put your fun stuff here.
-alias less='less --use-color --no-init -LINE-NUMBERS'
+alias less='less --use-color --no-init'
