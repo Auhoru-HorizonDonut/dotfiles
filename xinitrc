@@ -36,7 +36,7 @@ picom --daemon
 gentoo-pipewire-launcher &
 
 # Set keyboard layout
-setxkbmap -layout us,th -option 'grp:alt_space_toggle'
+#setxkbmap -layout us,th -option 'grp:alt_space_toggle'
 
 # Set backgroud picture
 bg_changer
