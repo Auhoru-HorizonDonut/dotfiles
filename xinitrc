@@ -31,10 +31,14 @@ preflightstartup()
 	
 	# Start Sound Server
 	gentoo-pipewire-launcher restart &
+
+	# Set FCITX evenironment variable
+	export XMODIFIERS=@im=fcitx
+	export GTK_IM_MODULE=fcitx
+	export QT_IM_MODULE=fcitx
 	
-	# Set keyboard layout
-	#setxkbmap -layout us,th -option 'grp:alt_space_toggle'
-	
+	# Start FCITX daemon
+	pgrep -x fcitx5 > /dev/null || fcitx5 -d &
 }
 
 # Setup multi-monitor (if available)
