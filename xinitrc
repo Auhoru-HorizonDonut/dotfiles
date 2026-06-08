@@ -33,12 +33,12 @@ preflightstartup()
 	gentoo-pipewire-launcher restart &
 
 	# Set FCITX evenironment variable
-	export XMODIFIERS=@im=fcitx
 	export GTK_IM_MODULE=fcitx
 	export QT_IM_MODULE=fcitx
+	export XMODIFIERS=@im=fcitx
 	
 	# Start FCITX daemon
-	pgrep -x fcitx5 > /dev/null || fcitx5 -d &
+	fcitx -d --replace &
 }
 
 # Setup multi-monitor (if available)
