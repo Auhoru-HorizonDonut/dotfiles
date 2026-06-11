@@ -38,7 +38,7 @@ preflightstartup()
 	export XMODIFIERS=@im=fcitx
 	
 	# Start FCITX daemon
-	fcitx -d --replace &
+	fcitx5 -d --replace &
 }
 
 # Setup multi-monitor (if available)
