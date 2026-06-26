@@ -17,9 +17,9 @@ if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
 fi
 
 # Add webots path into PATH
-if [ -z "$WEBOTS_HOME" ]; then
-	export WEBOTS_HOME="$HOME/.local/webots"
-fi
+#if [ -z "$WEBOTS_HOME" ]; then
+#	export WEBOTS_HOME="$HOME/.local/webots"
+#fi
 
 # Add podman as container manager
 #if [ -z "$DBX_CONTAINER_MANAGER" ]; then
