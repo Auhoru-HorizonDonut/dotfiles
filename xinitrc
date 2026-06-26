@@ -24,7 +24,7 @@ setupmonitor()
 preflightstartup()
 {
 	# Setup command
-	xset s off -dpms
+	#xset s off -dpms
 	
 	# Start picom
 	picom --daemon
