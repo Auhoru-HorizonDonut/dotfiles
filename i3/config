@@ -177,7 +177,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -241,24 +241,24 @@ bindsym $alt+v bar mode toggle
 bindsym $mod+Shift+BackSpace exec lockscreen
 
 # Alternative adjust volume
-bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+# bindsym $mod+F3 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+# bindsym $mod+F2 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+# bindsym $mod+F1 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 # Adjust brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 
 
 # Adjust brightness Alternative keys
-bindsym $mod+F7 exec xbacklight -inc 10
-bindsym $mod+F6 exec xbacklight -dec 10
+# bindsym $mod+F7 exec xbacklight -inc 10
+# bindsym $mod+F6 exec xbacklight -dec 10
 
 # Take Screenshot
 # Select region
 bindsym $mod+Shift+s exec printscreen 1
 
 # Full screen
-bindsym Print exec printscreen 0
+bindsym Print exec printscreen 2
 #bindsym Print exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/Picture/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/Picture/screenshots/screenshot_$NOW.png
 
 # Keymap toggle enable
