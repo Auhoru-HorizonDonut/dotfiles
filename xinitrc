@@ -47,22 +47,22 @@ setupmonitor
 # Set backgroud picture
 bg_changer
 
-OPTIONS="dwm\ni3wm"
-WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
-
 # Run wm related system start up
 preflightstartup
 
-case $WM in
-	"i3wm")
-		starti3wm
-		;;
-	"dwm")
-		startdwm
-		;;
-	*)
-		startdwm
-		;;
-esac
+#OPTIONS="dwm\ni3wm"
+#WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
+#
+#case $WM in
+#	"i3wm")
+#		starti3wm
+#		;;
+#	"dwm")
+#		startdwm
+#		;;
+#	*)
+#		startdwm
+#		;;
+#esac
 
-#startdwm
+startdwm
