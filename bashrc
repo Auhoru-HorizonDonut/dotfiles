@@ -17,3 +17,6 @@ fi
 
 # Put your fun stuff here.
 alias less='less --use-color --no-init'
+
+# Assign GPG_TTY everytimes terminal open
+export GPG_TTY=$(tty)
