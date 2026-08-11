@@ -31,8 +31,14 @@ if [ -z "$TEXMFPATH" ]; then
 	export TEXMFPATH="$HOME/.local/share/texmf"
 fi
 
+# Set python library path to point to a custom one"
+if [ -z "$PYTHONPATH" ]; then
+	export PYTHONPATH="$HOME/.local/pylib/lib/python3.14/site-packages"
+fi
+
 # Clear screen
 clear
 
 # Fetch system info
 fastfetch
+
