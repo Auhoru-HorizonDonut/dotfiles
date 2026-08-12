@@ -16,8 +16,6 @@ if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
 	export PATH="$HOME/.local/bin:$HOME/.local/sbin:$PATH"
 fi
 
-if [ -e /home/horizon/.nix-profile/etc/profile.d/nix.sh ]; then . /home/horizon/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 # Add webots path into PATH
 #if [ -z "$WEBOTS_HOME" ]; then
 #	export WEBOTS_HOME="$HOME/.local/webots"
