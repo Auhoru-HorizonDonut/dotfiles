@@ -22,9 +22,9 @@ fi
 #fi
 
 # Add podman as container manager
-#if [ -z "$DBX_CONTAINER_MANAGER" ]; then
-#	export DBX_CONTAINER_MANAGER=podman
-#fi
+if [ -z "$DBX_CONTAINER_MANAGER" ]; then
+	export DBX_CONTAINER_MANAGER=podman
+fi
 
 # Set texmf home path
 if [ -z "$TEXMFPATH" ]; then
