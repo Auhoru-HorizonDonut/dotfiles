@@ -45,7 +45,7 @@ preflightstartup()
 setupmonitor
 
 # Set backgroud picture
-bg_changer | tee -a /tmp/bg_log.log
+$(bg_changer | tee -a /tmp/bg_log.log) &
 
 # Run wm related system start up
 preflightstartup
