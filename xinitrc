@@ -11,6 +11,24 @@ starti3wm()
 	exec dbus-launch --exit-with-session i3
 }
 
+wmedselect()
+{
+	OPTIONS="dwm\ni3wm"
+	WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Tiling Windows Manager or Desktop Environment: ")
+	
+	case $WM in
+		"i3wm")
+			starti3wm
+			;;
+		"dwm")
+			startdwm
+			;;
+		*)
+			startdwm
+			;;
+	esac
+}
+
 setupmonitor()
 {
 	xrandr --output eDP-1 --auto
@@ -40,7 +58,6 @@ preflightstartup()
 	# Start FCITX daemon
 	fcitx5 -d --replace &
 }
-
 
 main()
 {
