@@ -75,17 +75,3 @@ main()
 }
 
 main
-#OPTIONS="dwm\ni3wm"
-#WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
-#
-#case $WM in
-#	"i3wm")
-#		starti3wm
-#		;;
-#	"dwm")
-#		startdwm
-#		;;
-#	*)
-#		startdwm
-#		;;
-#esac
