@@ -57,6 +57,7 @@ main()
 	startdwm
 }
 
+main
 #OPTIONS="dwm\ni3wm"
 #WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
 #
