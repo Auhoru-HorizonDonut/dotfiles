@@ -41,14 +41,21 @@ preflightstartup()
 	fcitx5 -d --replace &
 }
 
-# Setup multi-monitor (if available)
-setupmonitor
 
-# Set backgroud picture
-bg_changer &
+main()
+{
+	# Set up multi-monitor ( if available )
+	setupmonitor
 
-# Run wm related system start up
-preflightstartup
+	# Set background
+	bg_changer &
+
+	# Run wm preflight start up
+	preflightstartup
+
+	# Currently default to dwm
+	startdwm
+}
 
 #OPTIONS="dwm\ni3wm"
 #WM=$(echo -e "$OPTIONS" | rofi -show -dmenu -i -p "Select Windows Manager: ")
@@ -64,5 +71,3 @@ preflightstartup
 #		startdwm
 #		;;
 #esac
-
-startdwm
