@@ -2,7 +2,7 @@
 
 startdwm()
 {
-	custom-status-monitor &
+	slstatus &
 	exec dbus-launch --exit-with-session dwm
 }
 
